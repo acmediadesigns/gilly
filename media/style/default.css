@@ -1,0 +1,183 @@
+	
+	body{
+		/*background:url(/media/images/bg.jpg) repeat;*/
+		background: #63614f;
+		font-family: Helvetica Neue, Helvetica, Arial;
+		font-size:14px;
+		width:100%;
+		height:100%;
+		margin:0px;
+		padding:0px;
+	}
+	
+	img {border:none;}
+
+/*-------------GLOBALS------------*/
+div.container {position:relative; width:960px; padding:0px 10px;}
+.container div.slideshow {position:relative; float:left; width:936px; height:454px; background:white; box-shadow:0px 10px 25px 1px #888; -webkit-box-shadow:0px 0px 25px 1px #888; -moz-box-shadow:0px 10px 25px 1px #888; -o-box-shadow:0px 10px 25px 1px #888; border: 12px white solid; overflow: hidden;}
+.container div.slideshow img {width:936px; min-height:454px;}
+.container .slideshow a {position:absolute; width:165px; height:60px; top:142px;}
+.container .slideshow .rarrow {position:absolute; right:-28px;}
+.container .slideshow .larrow {position:absolute; left:-28px;}
+
+/*HEADER*/
+div.header {position:relative; float:left; margin:0px 0px -100px 40px; width:238px; height:282px; background:#FFF; box-shadow:0px 6px 10px 1px #222; z-index:2;}
+.header div.brand {position:relative; float:left; background:url(/media/images/brand.png) no-repeat; width:218px; height:97px; margin:12px 0px 30px 10px;}
+.header ul {list-style:none; padding:0px; margin:0px; font-size:16px;}
+.header a:link {text-decoration:none; color:#543901; text-shadow:0px 0px 2px #976602}
+.header a:visited {text-decoration:none; color:#543901; text-shadow:0px 0px 2px #976602}
+.header a:hover {text-decoration:none; color:#8ab854; text-shadow:0px 0px 2px #976602}
+
+/*SUB NAVIGATION*/
+div.portfolioSubContainer {position:relative; background:#63624f; float:left; width:100%; display:none; border-bottom:2px #c0c0c0 solid; box-shadow:6px 0px 0px #000; -webkit-box-shadow:6px 0px 0px #000; -moz-box-shadow:6px 0px 0px #000; -o-box-shadow:6px 0px 0px #000;}
+div.eventsSubContainer {position:relative; background:#63624f; float:left; width:100%; display:none; border-bottom:2px #c0c0c0 solid; box-shadow:6px 0px 0px #000; -webkit-box-shadow:6px 0px 0px #000; -moz-box-shadow:6px 0px 0px #000; -o-box-shadow:6px 0px 0px #000;}
+div.subNavContainer {position:relative; width:960px; padding:0px 10px;}
+.subNavContainer div.subNavHeader {position:relative; float:left; width:100%; border-bottom:2px #a5a383 solid; padding:0px 0px 0px 0px;}
+.subNavContainer div.subNavHeader h3 {float:left; color:white; font-size:30px; text-transform:uppercase; font-weight:400; margin:10px 0px; padding:0px 0px 0px 0px;}
+.subNavContainer div.subNavHeader span {float:right; color:white; font-size:12px; margin-top:24px;}
+.subNavContainer div.containSubNavThumbs {position:relative; float:left; width:932px; margin:10px 0px 20px 32px;}
+.subNavContainer .containSubNavThumbs div.subNavThumbContainer {position:relative; float:left; width:196px; margin:8px 12px;}
+.subNavContainer .containSubNavThumbs .subNavThumbContainer div.subNavThumb {position:relative; float:left; background:white; width:188px; height:134px; overflow:hidden; border:8px white solid; box-shadow:0px 6px 15px 1px #3d3d3d; -webkit-box-shadow:0px 6px 15px 1px #3d3d3d; -moz-box-shadow:0px 10px 15px 1px #3d3d3d; -o-box-shadow:0px 10px 15px 1px #3d3d3d;}
+.subNavContainer .containSubNavThumbs .subNavThumbContainer div.subNavThumb img {width:188px; min-height:134px;}
+.subNavContainer .containSubNavThumbs .subNavThumbContainer div.subNavThumb img:Hover {opacity:0.8; filter:alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity: 0.8;}
+.subNavContainer .containSubNavThumbs .subNavThumbContainer div.subNavThumbTitle {position:relative; float:left; width:100%; font-size:16px; color:#a5a383; text-align:left; margin-top:6px;}
+
+.subNavContainer div.closeSubNav {position:relative; float:right; background:url(/media/images/closeSubNav.png) 0px 0px; width:212px; height:36px; text-indent:-9999px; overflow:hidden; display:block; cursor:pointer;}
+.subNavContainer div.closeSubNav:Hover {background:url(/media/images/closeSubNav.png) 0px bottom;}
+
+/*SUB PAGE*/
+div.frame {position:relative; float:left; background:url(/media/images/innerBG.jpg) repeat; width:936px; min-height:200px; box-shadow:0px 10px 25px 1px #333; -webkit-box-shadow:0px 0px 25px 1px #333; -moz-box-shadow:0px 10px 25px 1px #333; -o-box-shadow:0px 10px 25px 1px #333; border: 12px white solid;}
+.frame div.pageSlide {position:relative; float:left; width:100%; height:308px; overflow:hidden;}
+.frame div.pageSlide img {width:936px; min-height:308px;}
+.frame div.pageHeader {position:relative; float:left; width:100%; height:62px; color:white; text-align:right;}
+.frame .pageHeader div.pageHeaderBG {position:absolute; top:0px; left:0px; background:black; width:100%; height:62px; opacity:0.4;}
+.frame div.pageHeader h1 {position:relative; float:right; width:100%; margin:8px 10px 0px 0px; padding:0px; text-transform:lowercase; font-weight:400;}
+.frame div.pageHeader span {position:relative; float:right; color:#8ab854; text-transform:uppercase; font-size:11px; margin-right:10px;}
+
+/*-------------ABOUT US-----------------*/
+.container .frame div.aboutUsContainer {position:relative; float:left; width:880px; color:white; font-size:14px; text-align:justify; margin:20px 0px 20px 28px;}
+.container .frame .aboutUsContainer div.aboutDivLine {position:relative; float:left; background:#646150; width:100%; height:1px; margin:0px 0px 20px 0px;}
+
+
+/*-------------QUOTE-----------------*/
+.container .frame div.quoteForm {position:relative; float:right; width:586px; margin:30px 42px 30px 0px;}
+.container .frame div.quoteForm table {border:none; width:100%; color:#646150; text-transform:uppercase;}
+.container .frame div.quoteForm table input {width:282px; height:26px; padding:4px; margin:0px 4px 4px 0px; font-size:14px; border:none; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+.container .frame div.quoteForm table select {width:586px; padding:4px; font-size:14px; color:black; border:none; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+.container .frame div.quoteForm table textarea {width:586px; height:100px; padding:4px; resize:none; font-size:14px; border:none; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+.container .frame div.quoteForm table button {background:#543901; color:white; font-size:14px; margin-top:10px; padding:6px 8px; border:none; cursor:pointer; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+.container .frame div.quoteForm table button:Hover {background:#335c03;}
+
+.container .frame div.quoteInfo {position:relative; float:left; width:242px; margin:30px 0px 30px 30px;}
+.container .frame div.quoteInfo table {width:100%; border:none; color:white;}
+.container .frame div.quoteInfo table td {border-bottom:1px #646150 solid; padding:4px 0px;}
+
+/*QUOTE STEP ICONS*/
+div.quoteStep1Icon {background:url(/media/images/quoteStepIcons.png) 0px 0px; width:40px; height:39px; overflow:hidden; text-indent:-9999px; display:block; margin-right:6px;}
+div.quoteStep2Icon {background:url(/media/images/quoteStepIcons.png) -40px 0px; width:40px; height:39px; overflow:hidden; text-indent:-9999px; display:block; margin-right:6px;}
+
+/*-------------PORTFOLIO/EVENTS-----------------*/
+.container .frame div.displayWorkCol {position:relative; float:right; width:620px; margin:30px 30px 30px 0px;}
+.container .frame .displayWorkCol div.workThumb {position:relative; float:left; background:white; width:178px; height:126px; overflow:hidden; border:8px white solid; margin:6px; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+.container .frame .displayWorkCol div.workThumb img {width:178px; min-height:126px;}
+.container .frame .displayWorkCol div.workThumb a.enlargePhoto:Link {position:absolute; background:url(/media/images/enlargePhoto.png) no-repeat; top:0px; left:0px; width:178px; height:126px; overflow:hidden; text-indent:-9999px; display:none;}
+.container .frame .displayWorkCol div.workThumb a.enlargePhoto:Visited {position:absolute; background:url(/media/images/enlargePhoto.png) no-repeat; top:0px; left:0px; width:178px; height:126px; overflow:hidden; text-indent:-9999px; display:none;}
+.container .frame .displayWorkCol div.workThumb:Hover a.enlargePhoto {display:block;}
+
+.container .frame div.workDesc {position:relative; float:left; width:242px; color:white; font-size:14px; text-align:justify; margin:30px 0px 30px 20px;}
+.container .frame div.workDesc h2 {float:left; width:100%; font-size:20px; font-weight:400; border-bottom:1px white solid; padding-bottom:6px; margin-bottom:6px;}
+
+
+/*-------------CHOOSE EVENT-----------------*/
+.container .frame div.chooseWorkCol {position:relative; float:left; width:860px; margin:30px 30px 30px 30px;}
+.container .frame .chooseWorkCol div.chooseEventContainer {position:relative; float:left; width:178px; margin:6px;}
+.container .frame .chooseWorkCol .chooseEventContainer div.workThumb {position:relative; float:left; background:white; width:178px; height:126px; overflow:hidden; border:8px white solid; margin-bottom:4px; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+.container .frame .chooseWorkCol .chooseEventContainer div.workThumb img {width:178px; min-height:126px;}
+.container .frame .chooseWorkCol .chooseEventContainer div.workThumb a.enlargePhoto:Link {position:absolute; background:url(/media/images/viewMoreBtn.png) no-repeat; top:0px; left:0px; width:178px; height:126px; overflow:hidden; text-indent:-9999px; display:none;}
+.container .frame .chooseWorkCol .chooseEventContainer div.workThumb a.enlargePhoto:Visited {position:absolute; background:url(/media/images/viewMoreBtn.png) no-repeat; top:0px; left:0px; width:178px; height:126px; overflow:hidden; text-indent:-9999px; display:none;}
+.container .frame .chooseWorkCol .chooseEventContainer div.workThumb:Hover a.enlargePhoto {display:block;}
+.container .frame .chooseWorkCol .chooseEventContainer a.workTitle:Link {position:relative; float:left; width:178px; color:#63624f; text-align:left; text-decoration:none; font-size:16px;}
+.container .frame .chooseWorkCol .chooseEventContainer a.workTitle:Visited {position:relative; float:left; width:178px; color:#63624f; text-align:left; text-decoration:none; font-size:16px;}
+
+/*-------------STORYBOARD-----------------*/
+.container .frame div.storyImageCol {position:relative; float:left; width:240px; margin:30px 0px 30px 20px;}
+.container .frame div.storyImageCol h1 {position:relative; float:left; width:100%; text-align:left; font-size:20px; color:#324116; text-transform:uppercase; font-weight:400; margin:0px 0px 8px 0px;}
+
+.container .frame .storyImageCol div.containBoardImgCategory {position:relative; float:left; width:100%; margin:2px 0px 0px 0px;}
+.container .frame .storyImageCol .containBoardImgCategory div.boardImgCategoryHeader {position:relative; float:left; width:100%; color:white; text-transform:uppercase; text-align:left; cursor:pointer; font-size:18px; padding-bottom:4px; border-bottom:1px #63614f solid;}
+.container .frame .storyImageCol .containBoardImgCategory ul {position:relative; float:left; width:100%; margin:0px; padding:0px; display:none;}
+.container .frame .storyImageCol .containBoardImgCategory ul li {float:left; list-style:none; width:45px; height:45px; overflow:hidden; border:2px white solid; margin:5px;}
+.container .frame .storyImageCol .containBoardImgCategory ul li img {width:45px; min-height:45px;}
+.container .frame div.storyImageCol table {position:relative; float:left; width:100%; margin:6px 0px 0px 0px;}
+.container .frame div.storyImageCol table input {width:230px; height:26px; padding:4px; margin:0px 4px 4px 0px; font-size:14px; border:none; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+.container .frame div.storyImageCol table select {width:230px; height:26px; padding:4px; margin:0px 4px 4px 0px; font-size:14px; border:none; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+
+.container .frame div.storyBoardCol {position:relative; float:right; width:646px; margin:30px 20px 30px 0px;}
+.container .frame .storyBoardCol div.learnBoardBtn {position:absolute; background:url(/media/images/boardLearnBtn.png) no-repeat; top:4px; left:0px; width:146px; height:25px; cursor:pointer; z-index:4;}
+.container .frame .storyBoardCol div.storyChangeBG {position:relative; float:right; width:100%; font-size:14px; color:#335c03; text-transform:uppercase; margin:0px 0px 10px 0px;}
+.container .frame .storyBoardCol .storyChangeBG div.currentBoardBGText {position:relative; float:right; margin:8px 10px 0px 0px;}
+.container .frame .storyBoardCol .storyChangeBG div.currentBoardBG {position:relative; float:right; background:#7b975b; width:84px; height:22px; border:4px white solid; cursor:pointer; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+.container .frame .storyBoardCol .storyChangeBG div.currentBoardBG input {width:84px; height:22px; margin:0px; padding:0px; border:none; outline:none; cursor:pointer; text-indent:-9999px;}
+div.storyBoardContainer {position:relative; float:left; background:white; width:100%; min-height:300px; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+.container .frame .storyBoardCol .storyBoardContainer div.storyBoardLearnPopUp {position:absolute; top:0px; left:0px; width:100%; height:100%; display:none;}
+.container .frame .storyBoardCol .storyBoardContainer .storyBoardLearnPopUp div.storyBoardLearnBG {position:absolute; background:white; top:0px; left:0px; width:100%; height:100%; opacity:0.7;}
+.container .frame .storyBoardCol .storyBoardContainer .storyBoardLearnPopUp div.storyBoardLearnDesc {position:absolute; background:url(/media/images/howToUseBoard.png) no-repeat; top:50%; left:50%; width:421px; height:216px; cursor:pointer; margin:-108px 0px 0px -210px;}
+
+div.clearBoard {position:relative; float:left; background:#335c03; width:100%; color:white; font-size:14px; text-transform:uppercase; margin:10px 0px 10px 0px; padding:4px 0px; cursor:pointer;}
+div.clearBoard:Hover {background:#63614f;}
+
+/*STORYBOARD UL*/
+div.storyBoardContainer ul {position:relative; float:left; padding:0px; margin:13px 0px 0px 13px;}
+div.storyBoardContainer ul li {float:left; list-style:none; width:304px; height:186px; overflow:hidden; margin:0px 12px 12px 0px;}
+div.storyBoardContainer ul li img {width:304px; min-height:186px;}
+
+.container .frame .storyBoardCol div.storyBoardButtons {position:relative; float:left; width:100%; text-align:right; margin:10px 0px 0px 0px;}
+.container .frame .storyBoardCol div.storyBoardButtons button {background:#543901; color:white; font-size:14px; padding:6px 8px; border:none; cursor:pointer; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+.container .frame .storyBoardCol div.storyBoardButtons button:Hover {background:#335c03;}
+
+/*-------------CONTACT US-----------------*/
+.container .frame div.contactInfo {position:relative; float:left; width:242px; margin:30px 0px 30px 30px;}
+.container .frame div.contactInfo table {width:100%; border:none; color:white;}
+.container .frame div.contactInfo table td {border-bottom:1px #646150 solid; padding:4px 0px;}
+.container .frame div.contactInfo a:Link, .container .frame div.contactInfo a:Visited {color: #FFF; text-decoration: none;}
+
+button#contactBtn {background:#543901; color:white; font-size:14px; padding:6px 8px; border:none; cursor:pointer; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+button#contactBtn:Hover {background:#335c03;}
+
+/*CONTACT ICONS*/
+div.addressIcon {background:url(/media/images/contactIcons.png) 0px 0px; width:40px; height:39px; overflow:hidden; text-indent:-9999px; display:block; margin-right:6px;}
+div.phoneIcon {background:url(/media/images/contactIcons.png) -40px 0px; width:40px; height:39px; overflow:hidden; text-indent:-9999px; display:block; margin-right:6px;}
+div.emailIcon {background:url(/media/images/contactIcons.png) -80px 0px; width:40px; height:39px; overflow:hidden; text-indent:-9999px; display:block; margin-right:6px;}
+div.facebookIcon {background:url(/media/images/contactIcons.png) -120px 0px; width:40px; height:39px; overflow:hidden; text-indent:-9999px; display:block; margin-right:6px;}
+div.yelpIcon {background:url(/media/images/contactIcons.png) -160px 0px; width:40px; height:39px; overflow:hidden; text-indent:-9999px; display:block; margin-right:6px;}
+div.instagramIcon {background:url(/media/images/contactIcons.png) -200px 0px; width:40px; height:39px; overflow:hidden; text-indent:-9999px; display:block; margin-right:6px;}
+
+.container .frame div.contactForm {position:relative; float:right; width:586px; margin:30px 42px 30px 0px;}
+.container .frame div.contactForm table {border:none; width:100%; text-transform:uppercase; color:#646150;}
+.container .frame div.contactForm table input {width:282px; height:26px; padding:4px; margin:0px 4px 4px 0px; font-size:14px; border:none; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+.container .frame div.contactForm table select {width:586px; padding:4px; font-size:14px; color:black; border:none; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+.container .frame div.contactForm table textarea {width:586px; height:100px; padding:4px; resize:none; font-size:14px; border:none; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+
+/*FOOTER*/
+div.footer {position:relative; float:left; width:100%; color:#FFF; font-size:11px; font-family: Helvetica Neue, Helvetica, Arial; text-transform:uppercase; font-weight:bold; margin-top:6px; padding-bottom:40px;}
+.footer div.copyright {position:relative; float:left;}
+.footer div.acmedia {position:relative; float:right;}
+.footer .acmedia a:link {text-decoration:none; color:#FFF;}
+.footer .acmedia a:visited {text-decoration:none; color:#FFF;}
+.footer .acmedia a:hover {text-decoration:none; color:#8ab854;}
+
+/*-------------------ADMIN------------------*/
+.container div.adminLoginContainer {position:relative; background:black; width:260px; padding:20px 20px; margin:100px 0px 0px 0px;}
+.container div.adminLoginContainer table {position:relative; width:260px; color:white;}
+.container div.adminLoginContainer table input {width:250px; height:20px;}
+.subNavContainer div.addPortfolio {position:relative; float:left; width:100%; text-align:right; margin:10px 0px;}
+.subNavContainer div.addPortfolio a {color:white; text-decoration:none; font-weight:bold;}
+
+div.addPortfolioOverlay {position:fixed; top:0px; left:0px; background:white; width:100%; height:100%; opacity:0.8; z-index:100; display:none; cursor:pointer;}
+div.addPortfolioWindow {position:absolute; background:url(/media/images/innerBG.jpg) repeat; top:100px; left:50%; width:400px; height:300px; padding-top:20px; margin:0px 0px 0px -200px; box-shadow:0px 0px 6px black; -webkit-box-shadow:0px 0px 6px black; -moz-box-shadow:0px 0px 6px black; -o-box-shadow:0px 0px 6px black; z-index:101; display:none;}
+.addPortfolioWindow table input {width:282px; height:26px; padding:4px; margin:0px 4px 4px 0px; font-size:14px; border:none; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+.addPortfolioWindow table textarea {width:282px; height:100px; padding:4px; font-size:14px; margin:0px 4px 4px 0px; resize:none; border:none; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+
+a.deletePortfolio:Link {position:relative; float:left; color:white; width:100%; font-size:16px; text-align:center; text-decoration:none; margin:20px 0px 0px 0px;}
+a.deletePortfolio:Visited {position:relative; float:left; color:white; width:100%; font-size:16px; text-align:center; text-decoration:none; margin:20px 0px 0px 0px;}
+a.deletePortfolio:Hover {text-decoration:underline;}

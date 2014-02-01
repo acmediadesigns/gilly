@@ -1,0 +1,56 @@
+/*
+	jQuery Coda-Slider v2.0 - http://www.ndoherty.biz/coda-slider
+	Copyright (c) 2009 Niall Doherty
+	This plugin available for use in all personal or commercial projects under both MIT and GPL licenses.
+*/
+
+/* Insignificant stuff, for demo purposes */
+
+	.panel h2.title { margin-bottom: 0px }
+	noscript div { background: #ccc; border: 0px solid #900; margin: 0px 0; padding: 0px }
+
+/* Most common stuff you'll need to change */
+
+	.coda-slider-wrapper { padding: 0px 0 }
+	.coda-slider { background: white }
+	
+	/* Use this to keep the slider content contained in a box even when JavaScript is disabled */
+	.coda-slider-no-js .coda-slider { height: 454px; overflow: auto !important; padding-right: 0px }
+	
+	/* Change the width of the entire slider (without dynamic arrows) */
+	.coda-slider, .coda-slider .panel { width: 936px } 
+	
+	/* Change margin and width of the slider (with dynamic arrows) */
+	.coda-slider-wrapper.arrows .coda-slider, .coda-slider-wrapper.arrows .coda-slider .panel { width: 936px }
+	.coda-slider-wrapper.arrows .coda-slider { margin: 0 0px }
+	
+	/* Arrow styling */
+	.coda-nav-left a:Link {position:absolute; background:url(/media/images/larrow.png) no-repeat; top:50%; left:14px; width:60px; height:165px; padding: 0px; margin:-82px 0px 0px 0px; overflow:hidden; display:block; text-indent:-9999px; z-index:4;}
+	.coda-nav-left a:Visited {position:absolute; background:url(/media/images/larrow.png) no-repeat; top:50%; left:14px; width:60px; height:165px; padding: 0px; margin:-82px 0px 0px 0px; overflow:hidden; display:block; text-indent:-9999px; z-index:4;}
+	.coda-nav-right a:Link {position:absolute; background:url(/media/images/rarrow.png) no-repeat; top:50%; right:14px; width:60px; height:165px; padding: 0px; margin:-82px 0px 0px 0px; overflow:hidden; display:block; text-indent:-9999px; z-index:4;}
+	.coda-nav-right a:Visited {position:absolute; background:url(/media/images/rarrow.png) no-repeat; top:50%; right:14px; width:60px; height:165px; padding: 0px; margin:-82px 0px 0px 0px; overflow:hidden; display:block; text-indent:-9999px; z-index:4;}
+	
+	/* Tab nav */
+	.coda-nav ul li a.current { background: #39c }
+	
+	/* Panel padding */
+	.coda-slider .panel-wrapper { padding: 0px }
+	
+	/* Preloader */
+	.coda-slider p.loading { padding: 0px; text-align: center }
+
+/* Don't change anything below here unless you know what you're doing */
+
+	/* Tabbed nav */
+	.coda-nav ul { clear: both; display: block; margin: auto; overflow: hidden }
+	.coda-nav ul li { display: inline }
+	.coda-nav ul li a { background: #000; color: #fff; display: block; float: left; margin-right: 0px; padding: 0px; text-decoration: none }
+	
+	/* Miscellaneous */
+	.coda-slider-wrapper { clear: both; overflow: auto }
+	.coda-slider { float: left; overflow: hidden; position: relative }
+	.coda-slider .panel { display: block; float: left }
+	.coda-slider .panel-container { position: relative }
+	/*.coda-nav-left, .coda-nav-right { float: left }
+	.coda-nav-left a, .coda-nav-right a { display: block; text-align: center; text-decoration: none }*/
+	
