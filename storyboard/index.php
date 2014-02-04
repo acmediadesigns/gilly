@@ -15,7 +15,7 @@
 		exit();
 	}
 	
-	echo $db->sendQuoteEmail($mysqli,"allan@acmediadesigns.com", $quoteArray);
+	echo $db->sendQuoteEmail($mysqli, "gilly.flowers.events.la@gmail.com", $quoteArray);
 	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
