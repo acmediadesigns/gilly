@@ -15,7 +15,7 @@
 		exit();
 	}
 	
-	echo $db->sendQuoteEmail($mysqli,"allan@acmediadesigns.com",$quoteArray);
+	echo $db->sendQuoteEmail($mysqli,"allan@acmediadesigns.com", $quoteArray);
 	
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -31,13 +31,14 @@
 <script type="text/javascript">
 	var quoteData = '<?php echo addslashes($quoteArray); ?>';
 	
-	$('#uploadImg').live('click', function() { 
-		//$("#preview").html('<img src="loader.gif" alt="Uploading...."/>');
+	$('#uploadImg').live('click', function() {
 		$("#imageform").ajaxForm({
-			target: 'div.storyBoardContainer ul'
-			//$('div.storyBoardContainer ul').prepend(target);
-		}).submit();
-			
+      success: function(response) {
+        $('div.storyBoardContainer ul').prepend(response);
+        $('input#userImg').val('');
+      }
+		});
+
 	});
 	
 </script>

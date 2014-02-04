@@ -586,32 +586,6 @@ $eventOverview->close();
 	
 	public function storyImageCol($mysqli) { ?>
 		<div class="storyImageCol">
-			<h1>Choose Our Images:</h1>
-	
-<?php
-	$boardImgCatQuery = $mysqli->query("SELECT * FROM `storyboard_categories` ORDER BY `category_name` ASC");
-	if($boardImgCatQuery->num_rows > 0) {
-		while($boardCat = $boardImgCatQuery->fetch_assoc()) {
-			$catID = $boardCat['id']; ?>
-			<div class="containBoardImgCategory">
-				<div class="boardImgCategoryHeader" id="<?php echo $boardCat['id']; ?>">
-					<?php echo substr($boardCat['category_name'],0,19); ?>:
-				</div>
-				<ul id="boardImg<?php echo $boardCat['id']; ?>">
-	<?php $boardImgQuery = $mysqli->query("SELECT * FROM `storyboard_system_images` WHERE `category_id` = '$catID' AND `user_upload` != 1");
-			if($boardImgQuery->num_rows > 0) {
-				while($catImg = $boardImgQuery->fetch_assoc()) { ?>
-					<li><a href=""><img src="<?php echo $catImg['image_path']; ?>" id="<?php echo $catImg['id']; ?>" alt="" /></a></li>
-	<?php } } else echo '<div style="position:relative; float:left; width:100%; text-align:center; margin:4px 0px;">Images Coming Soon!</div>'; ?>
-				</ul>
-			</div>
-<?php } } else echo '<div style="position:relative; float:left; width:100%; text-align:center; margin:0px 0px 0px 0px;">Image Categories Coming Soon!</div>';
-$boardImgQuery->close();
-$boardImgCatQuery->close();
-?>
-			
-			<div class="clearBoard">Clear Storyboard</div>
-			
 			<h1>Upload Your Images:</h1>
 			<form id="imageform" method="post" enctype="multipart/form-data" action="uploadImg.php">
 				<table border="0" cellspacing="0">
@@ -622,25 +596,14 @@ $boardImgCatQuery->close();
 						<td><input type="file" name="userImg" id="userImg" /></td>
 					</tr>
 					<tr>
-						<td>Categorize Your Image:</td>
-					</tr>
-					<tr>
-						<td>
-							<select name="userImgCategory" id="userImgCategory">
-								<option value="">Select:</option>
-								<option value="1">Arrangements</option>
-								<option value="2">Bridal</option>
-								<option value="3">Events</option>
-								<option value="4">Living</option>
-							</select>
-						</td>
-					</tr>
-					<tr>
 						<td align="right"><button type="submit" id="uploadImg">Upload</button></td>
 					</tr>
 				</table>
 				<input type="hidden" name="quoteData" value="<?php echo implode(",",$_POST); ?>" />
 			</form>
+			
+			<div class="clearBoard">Clear Storyboard</div>
+			
 			<?php if(isset($_SESSION['adminID'])) { ?>
 			  <a href="/storyboard/photos">Edit Storyboard Images</a>
 			<?php } ?>
@@ -669,7 +632,7 @@ $boardImgCatQuery->close();
 					<input type="hidden" name="quoteData" value="<?php echo $postArray; ?>" />
 					<input type="hidden" name="boardData" id="boardData" />
 					<button type="submit">Skip Storyboard</button>
-					<button type="submit">Submit Storyboard</button>
+					<button type="submit" id="submitStoryBoard">Submit Storyboard</button>
 				</div>
 			</form>
 		</div>
@@ -691,7 +654,7 @@ $boardImgCatQuery->close();
 	}
 	
 	
-	public function sendQuoteEmail($mysqli,$to,$quoteData) {
+	public function sendQuoteEmail($mysqli, $to, $quoteData) {
 		if(isset($_POST['quoteData'])) {
 			$quoteArray = explode("|",addslashes($quoteData));
 			$boardData = makeSQLSafe($mysqli,$_POST['boardData']);

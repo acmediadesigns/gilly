@@ -34,6 +34,16 @@
 				//alert(boardOrder);
 			}
 		});
+
+        $('button#submitStoryBoard').click(function() {
+            var boardData = $("div.storyBoardContainer ul").html();
+            if(boardData != "" && boardData != undefined) {
+                $('input#boardData').val(boardData);
+                return true;
+            }
+
+            return false;
+        });
 		
 		//ADD PORTFOLIO
 		$('.addPortfolio a').click(function() {
