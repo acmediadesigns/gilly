@@ -8,18 +8,15 @@ class base {
 				$adminBtn = new admin; 
 				echo $adminBtn->adminBtns();
 			?>
-			<ul>
-        <li style="padding-left: 20px;"><a href="/">HOME</a></li>
-			</ul>
 			<div class="brand">
-  			<img src="/media/images/brand.png" alt="Gilly FLowers" />
+  			<a href="/"><img src="/media/images/brand.png" alt="Gilly Flowers" /></a>
 			</div>
 			<ul>
-				<li style="padding-left: 20px;"><a href="/about/">ABOUT</a></li>
-				<li><a href="/delivery/">DELIVERY INFO</a></li>
-				<li><a id="portfolioNav" href="">PORTFOLIO</a></li>
-				<li><a href="/quote/">GET A QUOTE</a></li>
-				<li><a href="/contact/">CONTACT</a></li>
+				<li style="padding-left: 20px;"><a href="/about/">about</a></li>
+				<li><a href="/delivery/">delivery info</a></li>
+				<li><a id="portfolioNav" href="">portfolio</a></li>
+				<li><a href="/quote/">get a quote</a></li>
+				<li><a href="/contact/">contact</a></li>
 			</ul>
 		</div>
 <?php	

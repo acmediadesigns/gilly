@@ -22,12 +22,12 @@ div.container {position:relative; width:960px; padding:0px 10px;}
 
 /*HEADER*/
 div.header {}
-.header div.brand {position:relative; float:left; margin:30px 0px -100px 0; padding: 20px; width:238px; background:#FFF; box-shadow:0px 6px 10px 1px #222; z-index:2;}
+.header div.brand {position:relative; float:left; margin:30px 0px -100px 30px; padding: 20px; width:238px; background:#FFF; box-shadow:0px 6px 10px 1px #222; z-index:2;}
 .header ul {list-style:none; padding:0px; margin: 0; font-size:16px;}
 .header ul li {float: left; margin-right: 14px; margin-top: 64px; margin-bottom: 10px;}
 .header a:link {text-decoration:none; color:#FFF; text-shadow:0px 0px 2px #976602}
 .header a:visited {text-decoration:none; color:#FFF; text-shadow:0px 0px 2px #976602}
-.header a:hover {text-decoration:none; color:#FFF; text-shadow:0px 0px 2px #976602}
+.header a:hover {text-decoration:none; color:#8ab854; text-shadow:0px 0px 2px #976602}
 
 /*SUB NAVIGATION*/
 div.portfolioSubContainer {position:relative; background:#63624f; float:left; width:100%; display:none; border-bottom:2px #c0c0c0 solid; box-shadow:6px 0px 0px #000; -webkit-box-shadow:6px 0px 0px #000; -moz-box-shadow:6px 0px 0px #000; -o-box-shadow:6px 0px 0px #000;}
@@ -160,7 +160,7 @@ div.instagramIcon {background:url(/media/images/contactIcons.png) -200px 0px; wi
 .container .frame div.contactForm table textarea {width:586px; height:100px; padding:4px; resize:none; font-size:14px; border:none; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
 
 /*FOOTER*/
-div.footer {position:relative; float:left; width:100%; color:#FFF; font-size:11px; font-family: Helvetica Neue, Helvetica, Arial; text-transform:uppercase; font-weight:bold; margin-top:6px; padding-bottom:40px;}
+div.footer {position:relative; float:left; width:100%; color:#FFF; font-size:11px; font-family: Helvetica Neue, Helvetica, Arial; text-transform:lowercase; font-weight:bold; margin-top:6px; padding-bottom:40px;}
 .footer div.copyright {position:relative; float:left;}
 .footer div.acmedia {position:relative; float:right;}
 .footer .acmedia a:link {text-decoration:none; color:#FFF;}
