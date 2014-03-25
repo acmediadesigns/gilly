@@ -6,7 +6,30 @@ class base {
 		<div class="header">
 			<?php 
 				$adminBtn = new admin; 
-				echo $adminBtn->logoutBtn();
+				echo $adminBtn->adminBtns();
+			?>
+			<ul>
+        <li style="padding-left: 20px;"><a href="/">HOME</a></li>
+			</ul>
+			<div class="brand">
+  			<img src="/media/images/brand.png" alt="Gilly FLowers" />
+			</div>
+			<ul>
+				<li style="padding-left: 20px;"><a href="/about/">ABOUT</a></li>
+				<li><a href="/delivery/">DELIVERY INFO</a></li>
+				<li><a id="portfolioNav" href="">PORTFOLIO</a></li>
+				<li><a href="/quote/">GET A QUOTE</a></li>
+				<li><a href="/contact/">CONTACT</a></li>
+			</ul>
+		</div>
+<?php	
+	}
+	
+	public function header_org() { ?>
+		<div class="header">
+			<?php 
+				$adminBtn = new admin; 
+				echo $adminBtn->adminBtns();
 			?>
 			<div class="brand"></div>
 			<ul>
@@ -68,13 +91,7 @@ class base {
 	
 	
 	public function slideshow($mysqli) {
-		$slideQuery = $mysqli->query("SELECT * FROM `home_slideshow` ORDER BY `order` ASC");
-		if(isset($_SESSION['adminID'])) {
-			echo '<div style="float: right; margin-top: 10px;">';
-				echo '<a href="/admin/slideshow.php" style="color: #FFF;">Edit Slideshow</a><br />';
-				echo '<a href="/admin/page-images.php" style="color: #FFF;">Edit Page Images</a>';
-			echo '</div>';
-		} ?>
+		$slideQuery = $mysqli->query("SELECT * FROM `home_slideshow` ORDER BY `order` ASC"); ?>
 			<div class="slideshow" align="left">
 				<div class="coda-slider-wrapper">
 					<div class="coda-slider preload" id="coda-slider-1">
@@ -753,9 +770,14 @@ class admin {
 		}
 	}
 	
-	public function logoutBtn() {
+	public function adminBtns() {
 		if(isset($_SESSION['adminID'])) {
-			echo '<div style="position:absolute; top:6px; right:6px; z-index:9;"><a href="/?logout" style="color:color; text-decoration:none;">Logout</a></div>';
+			echo '<div style="position:absolute; top:6px; right:6px; z-index:9;">';
+			echo '<a href="/slideshow/" style="color:color; text-decoration:none; padding-right: 10px;">Slideshow</a>';
+			echo '<a href="/admin/slideshow.php" style="color:color; text-decoration:none; padding-right: 10px;">Edit Slideshow</a>';
+			echo '<a href="/admin/page-images.php" style="color:color; text-decoration:none; padding-right: 10px;">Edit Page Images</a>';
+			echo '<a href="/?logout" style="color:color; text-decoration:none;">Logout</a>';
+			echo '</div>';
 		}
 	}
 	
