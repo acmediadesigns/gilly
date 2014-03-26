@@ -24,7 +24,7 @@ div.container {position:relative; width:960px; padding:0px 10px;}
 div.header {}
 .header div.brand {position:relative; float:left; margin:30px 0px -100px 30px; padding: 20px; width:238px; background:#FFF; box-shadow:0px 6px 10px 1px #222; z-index:2;}
 .header ul {list-style:none; padding:0px; margin: 0; font-size:16px;}
-.header ul li {float: left; margin-right: 14px; margin-top: 64px; margin-bottom: 10px;}
+.header ul li {float: left; margin-right: 60px; margin-top: 64px; margin-bottom: 10px;}
 .header a:link {text-decoration:none; color:#FFF; text-shadow:0px 0px 2px #976602}
 .header a:visited {text-decoration:none; color:#FFF; text-shadow:0px 0px 2px #976602}
 .header a:hover {text-decoration:none; color:#8ab854; text-shadow:0px 0px 2px #976602}
@@ -34,7 +34,7 @@ div.portfolioSubContainer {position:relative; background:#63624f; float:left; wi
 div.eventsSubContainer {position:relative; background:#63624f; float:left; width:100%; display:none; border-bottom:2px #c0c0c0 solid; box-shadow:6px 0px 0px #000; -webkit-box-shadow:6px 0px 0px #000; -moz-box-shadow:6px 0px 0px #000; -o-box-shadow:6px 0px 0px #000;}
 div.subNavContainer {position:relative; width:960px; padding:0px 10px;}
 .subNavContainer div.subNavHeader {position:relative; float:left; width:100%; border-bottom:2px #a5a383 solid; padding:0px 0px 0px 0px;}
-.subNavContainer div.subNavHeader h3 {float:left; color:white; font-size:30px; text-transform:uppercase; font-weight:400; margin:10px 0px; padding:0px 0px 0px 0px;}
+.subNavContainer div.subNavHeader h3 {float:left; color:white; font-size:30px; text-transform:lowercase; font-weight:400; margin:10px 0px; padding:0px 0px 0px 0px;}
 .subNavContainer div.subNavHeader span {float:right; color:white; font-size:12px; margin-top:24px;}
 .subNavContainer div.containSubNavThumbs {position:relative; float:left; width:932px; margin:10px 0px 20px 32px;}
 .subNavContainer .containSubNavThumbs div.subNavThumbContainer {position:relative; float:left; width:196px; margin:8px 12px;}
