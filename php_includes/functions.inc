@@ -184,8 +184,12 @@ class base {
 			<table border="0" cellspacing="0">
 				<tr>
 					<td><div class="addressIcon"></div></td>
-					<td>1631 GLENDALE BLVD<br />LOS ANGELES, CA 90026</td>
+					<td>STUDIO:<br />1631 GLENDALE BLVD<br />LOS ANGELES, CA 90026</td>
 				</tr>
+        <tr>
+          <td><div class="addressIcon"></div></td>
+          <td>SHOP:<br />59 COLORADO BLVD<br />PASADENA, CA 91105</td>
+        </tr>
 				<tr>
 					<td><div class="phoneIcon"></div></td>
 					<td>323.953.2910</td>
