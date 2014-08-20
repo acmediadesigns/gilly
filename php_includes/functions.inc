@@ -449,6 +449,21 @@ class db {
 				</table>
 			</form>
 			<a href="/?deletePort=<?php echo $cat['id']; ?>" class="deletePortfolio">Delete This Portfolio</a>
+
+      <?php if(getURLSegments()[1] == 'events') { ?>
+      <form action="/admin/eventTitle.php" method="get">
+        <h2>Category Title:</h2>
+        <table style="width: 100%;">
+          <tr>
+            <td><input type="text" name="title" placeholder="<?php echo $cat['category_name']; ?>" style="width: 100%;" /></td>
+          </tr>
+          <tr>
+            <td><button type="submit" style="float: right;">Update</button></td>
+          </tr>
+        </table>
+        <input type="hidden" name="id" value="<?php echo $cat['id']; ?>" />
+      </form>
+      <?php } ?>
 		</div>
 <?php
 	}
@@ -933,5 +948,13 @@ class admin {
 			return substr($filename, 0, $pos);
 		}
 	}
+
+  /**
+   * @return array of url segments
+   */
+  function getURLSegments() {
+    $urlArray = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    return explode('/', $urlArray);
+  }
 
 ?>
