@@ -894,6 +894,26 @@ class admin {
 			}			
 		}
 	}
+
+  /**
+   * @param $mysqli
+   * @param $id
+   * @param $title
+   * @desc Update category title
+   */
+  public function updateEventTitle($mysqli, $id, $title) {
+    if(isset($_SESSION['adminID']) && isset($title)) {
+      $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $title)));
+
+      $update = $mysqli->query("update `events` set `category_name` = '$title', `category_url` = '$slug' where `id` = '$id' LIMIT 1");
+
+      if($update) {
+        return true;
+      }
+
+      return false;
+    }
+  }
 }
 
 	function makeSQLSafe($mysqli,$string) {
