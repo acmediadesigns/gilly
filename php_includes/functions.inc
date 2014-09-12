@@ -720,7 +720,7 @@ $eventOverview->close();
 				$getLatestBoardQuery = $mysqli->query("SELECT * FROM `client_storyboards` ORDER BY `id` DESC");
 				$latestboard = $getLatestBoardQuery->fetch_assoc();
 				
-				$message .= "<br><br><a href=\"http://gilly.acmediadesigns.net/storyboard/board.php?bid=".$latestboard['board_hash']."\" target=\"_blank\">Click Here To See The StoryBoard</a><br>";	
+				$message .= "<br><br><a href=\"http://gillyflowers.com/storyboard/board.php?bid=".$latestboard['board_hash']."\" target=\"_blank\">Click Here To See The StoryBoard</a><br>";
 			}
 			
 			$headers = 'From: Gilly Flowers'."\r\n";
