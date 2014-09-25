@@ -9,6 +9,7 @@
 	$admin = new admin;
 	
 	echo $admin->addPortfolio($mysqli);
+  echo $admin->addEvent($mysqli);
 	echo $admin->deletePortfolio($mysqli);
 	echo $admin->logout($mysqli);	
 	

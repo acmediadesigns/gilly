@@ -171,13 +171,20 @@ div.footer {position:relative; float:left; width:100%; color:#FFF; font-size:11p
 .container div.adminLoginContainer {position:relative; background:black; width:260px; padding:20px 20px; margin:100px 0px 0px 0px;}
 .container div.adminLoginContainer table {position:relative; width:260px; color:white;}
 .container div.adminLoginContainer table input {width:250px; height:20px;}
-.subNavContainer div.addPortfolio {position:relative; float:left; width:100%; text-align:right; margin:10px 0px;}
+.subNavContainer div.addPortfolio {position:relative; float:left; margin:10px 10px 10px 0;}
 .subNavContainer div.addPortfolio a {color:white; text-decoration:none; font-weight:bold;}
+.subNavContainer div.addEvent {position:relative; float:left; margin:10px 10px 10px 0;}
+.subNavContainer div.addEvent a {color:white; text-decoration:none; font-weight:bold;}
 
 div.addPortfolioOverlay {position:fixed; top:0px; left:0px; background:white; width:100%; height:100%; opacity:0.8; z-index:100; display:none; cursor:pointer;}
 div.addPortfolioWindow {position:absolute; background:url(/media/images/innerBG.jpg) repeat; top:100px; left:50%; width:400px; height:300px; padding-top:20px; margin:0px 0px 0px -200px; box-shadow:0px 0px 6px black; -webkit-box-shadow:0px 0px 6px black; -moz-box-shadow:0px 0px 6px black; -o-box-shadow:0px 0px 6px black; z-index:101; display:none;}
 .addPortfolioWindow table input {width:282px; height:26px; padding:4px; margin:0px 4px 4px 0px; font-size:14px; border:none; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
 .addPortfolioWindow table textarea {width:282px; height:100px; padding:4px; font-size:14px; margin:0px 4px 4px 0px; resize:none; border:none; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+
+div.addEventOverlay {position:fixed; top:0px; left:0px; background:white; width:100%; height:100%; opacity:0.8; z-index:100; display:none; cursor:pointer;}
+div.addEventWindow {position:absolute; background:url(/media/images/innerBG.jpg) repeat; top:100px; left:50%; width:400px; height:300px; padding-top:20px; margin:0px 0px 0px -200px; box-shadow:0px 0px 6px black; -webkit-box-shadow:0px 0px 6px black; -moz-box-shadow:0px 0px 6px black; -o-box-shadow:0px 0px 6px black; z-index:101; display:none;}
+.addEventWindow table input {width:282px; height:26px; padding:4px; margin:0px 4px 4px 0px; font-size:14px; border:none; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
+.addEventWindow table textarea {width:282px; height:100px; padding:4px; font-size:14px; margin:0px 4px 4px 0px; resize:none; border:none; box-shadow:0px 6px 15px 1px #656250; -webkit-box-shadow:0px 6px 15px 1px #656250; -moz-box-shadow:0px 10px 15px 1px #656250; -o-box-shadow:0px 10px 15px 1px #656250;}
 
 a.deletePortfolio:Link {position:relative; float:left; color:white; width:100%; font-size:16px; text-align:center; text-decoration:none; margin:20px 0px 0px 0px;}
 a.deletePortfolio:Visited {position:relative; float:left; color:white; width:100%; font-size:16px; text-align:center; text-decoration:none; margin:20px 0px 0px 0px;}

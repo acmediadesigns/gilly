@@ -79,6 +79,36 @@ class base {
 				</table>
 			</form>
 		</div>
+
+    <div class="addEventOverlay"></div>
+    <div class="addEventWindow">
+      <form action="/" method="post" enctype="multipart/form-data">
+        <table border="0">
+          <tr>
+            <td>Event Name:</td>
+          </tr>
+          <tr>
+            <td><input type="text" name="addEventName" id="addEventName" /></td>
+          </tr>
+          <tr>
+            <td>Event Thumbnail:</td>
+          </tr>
+          <tr>
+            <td><input type="file" name="addEventThumb" id="addEventThumb" /></td>
+          </tr>
+          <tr>
+            <td>Event Description:</td>
+          </tr>
+          <tr>
+            <td><textarea name="addEventDesc" id="addEventDesc"></textarea></td>
+          </tr>
+          <tr>
+            <td align="right"><button type="submit">Add</button></td>
+          </tr>
+        </table>
+        <input type="hidden" name="addEvent" />
+      </form>
+    </div>
 		
 	<?php 
 	} ?>
@@ -134,8 +164,9 @@ class base {
 					<?php if($content == "portfolio") echo "<h3>Portfolio:</h3>"; else echo "<h3>Latest Events</h3>"; ?>
 					<?php if($content == "portfolio") echo "<span>CHOOSE A CATEGORY TO VIEW MORE</span>"; else echo "<span>CHOOSE A EVENT TO VIEW MORE</span>"; ?>
 				</div>
-				
-				<?php if(isset($_SESSION['adminID'])) echo '<div class="addPortfolio"><a href="">+ New Portfolio</a></div>'; ?>
+
+        <?php if(isset($_SESSION['adminID'])) echo '<div class="addEvent"><a href="">+ New Event</a></div>'; ?>
+        <?php if(isset($_SESSION['adminID'])) echo '<div class="addPortfolio"><a href="">+ New Portfolio</a></div>'; ?>
 				
 				<div class="containSubNavThumbs">
 	<?php $subNavQuery = $mysqli->query("SELECT * FROM `".$content."_categories` ORDER BY `category_name` ASC");
@@ -844,8 +875,29 @@ class admin {
 			header("Location: /portfolio/".$addPortURL);
 			exit();
 		}
-	
 	}
+
+  public function addEvent($mysqli) {
+    if(isset($_POST['addEvent'])) {
+
+      $addEventName = makeSQLSafe($mysqli,$_POST['addEventName']);
+      $addEventDesc = makeSQLSafe($mysqli,$_POST['addEventDesc']);
+      $addEventFileName = $_FILES['addEventThumb']['name'];
+      $addEventTmp = $_FILES['addEventThumb']['tmp_name'];
+      $addEventSize = $_FILES['addEventThumb']['size'];
+      $fileExt = str_replace(".","",strrchr($addEventFileName,"."));
+      $hashName = SHA1(RAND(0000,9999).date("Ymd").RAND(0000,9999).$addEventFileName).".".$fileExt;
+
+      $urlReplace = array(" ","  ");
+      $addEventURL = str_replace($urlReplace,"-",strtolower($addEventName));
+
+      move_uploaded_file($_FILES['addEventThumb']['tmp_name'], $_SERVER['DOCUMENT_ROOT']."/media/images/events/".$hashName);
+
+      $mysqli->query("INSERT INTO `events` (`category_name`,`thumbnail_path`,`category_url`,`category_description`,`datetime`) VALUES ('$addEventName','/media/images/events/$hashName','$addEventURL','$addEventDesc',NOW())");
+      header("Location: /events/".$addEventURL);
+      exit();
+    }
+  }
 	
 	public function deletePortfolio($mysqli) {
 		if(isset($_GET['deletePort']) && is_numeric($_GET['deletePort'])) {

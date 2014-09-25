@@ -57,6 +57,19 @@
 			$('.addPortfolioWindow').fadeOut(200);
 			return false;
 		});
+
+    //ADD EVENT
+    $('.addEvent a').click(function() {
+      $('.addEventOverlay').fadeIn(200);
+      $('.addEventWindow').fadeIn(200);
+      return false;
+    });
+
+    $('.addEventOverlay').click(function() {
+      $('.addEventOverlay').fadeOut(200);
+      $('.addEventWindow').fadeOut(200);
+      return false;
+    });
 		
 		//VERIFY QUOTE FORM
 		$('div.quoteForm table button').click(function() {
